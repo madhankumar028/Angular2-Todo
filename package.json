@@ -1,7 +1,7 @@
 {
-  "name": "angular2",
+  "name": "Angular2 TodoApp",
   "version": "1.0.0",
-  "description": "sample angular app",
+  "description": "sample angular2 TodoApp",
   "main": "tsconfig.json",
   "dependencies": {
     "@angular/common": "^2.4.1",
