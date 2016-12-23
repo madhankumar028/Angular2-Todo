@@ -1,0 +1,36 @@
+{
+  "name": "angular2",
+  "version": "1.0.0",
+  "description": "sample angular app",
+  "main": "tsconfig.js",
+  "dependencies": {
+    "@angular/common": "^2.4.1",
+    "@angular/compiler": "^2.4.1",
+    "@angular/core": "^2.4.1",
+    "@angular/platform-browser": "^2.4.1",
+    "@angular/platform-browser-dynamic": "^2.4.1",
+    "@angular/router": "^3.0.0-rc.1",
+    "@angular/upgrade": "^2.0.0-rc.5",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.9",
+    "rxjs": "^5.0.0-beta.12",
+    "systemjs": "^0.19.41",
+    "typescript": "^2.1.4",
+    "typings": "^2.1.0",
+    "zone.js": "^0.6.26"
+  },
+  "scripts": {
+    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\"",
+    "dev": "lite-server",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings",
+    "postinstall": "typings install"
+  },
+  "author": "MadhankumarJ",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "typings": "^2.1.0"
+  }
+}
