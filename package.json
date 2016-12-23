@@ -2,7 +2,7 @@
   "name": "angular2",
   "version": "1.0.0",
   "description": "sample angular app",
-  "main": "tsconfig.js",
+  "main": "tsconfig.json",
   "dependencies": {
     "@angular/common": "^2.4.1",
     "@angular/compiler": "^2.4.1",
@@ -31,6 +31,6 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.1.0",
-    "typings": "^2.1.0"
+    "lite-server": "^2.2.2"
   }
 }

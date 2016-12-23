@@ -21,7 +21,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n    <div className=\"row\">\n        <div className=\"col-sm-4\">\n            <p>{{test}}</p>\n        </div>\n        <div className=\"col-sm-8\">\n            <div class=\"jumbotron\">\n                <h1>Hai</h1>\n                <button class=\"btn btn-primary\" (click)=counter()>ClickMe</button>\n            </div>\n        </div>\n    </div>\n    "
+        template: "\n    <div className=\"row\">\n        <div className=\"col-sm-12\">\n            <div class=\"jumbotron\">\n                <h1>TodoApp using Angular2</h1>\n                <button class=\"btn btn-primary\" (click)=counter()>ClickMe</button>\n            </div>\n        </div>\n    </div>\n    "
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);
