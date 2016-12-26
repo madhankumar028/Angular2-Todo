@@ -7,7 +7,7 @@
     <div className="col-sm-4 col-sm-offset-4">
         <div class="checkbox" *ngFor="let list of todos">
             <label>
-                <input type="checkbox"/> {{list.name}}
+                <input type="checkbox" (click)=delete(list.name)/> {{list.name}}
             </label>
         </div>
     </div>

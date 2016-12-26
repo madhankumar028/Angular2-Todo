@@ -12,6 +12,7 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
         this.test = 'test';
+        this.newTodo = [];
         this.todos = [
             { name: 'Angular2' },
             { name: 'Angular1' },
@@ -19,7 +20,16 @@ var AppComponent = (function () {
         ];
     }
     AppComponent.prototype.add = function (todo) {
+        this.newTodo.name = todo;
+        this.todos.push(this.newTodo);
+        this.todo = '';
         console.log('click event is trigered');
+    };
+    AppComponent.prototype.delete = function (todo) {
+        console.log(todo);
+        var index = this.todos.indexOf(todo);
+        this.todos.pop(index);
+        console.log(index);
     };
     return AppComponent;
 }());

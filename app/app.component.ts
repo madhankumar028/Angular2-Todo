@@ -17,6 +17,8 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
     test: string = 'test';
+    newTodo: any = [];
+    todo: any;
 
     todos = [
         {name: 'Angular2'},
@@ -24,7 +26,17 @@ export class AppComponent {
         {name: 'git status'},
     ];
 
-    add(todo: Object) {
+    add(todo) {
+        this.newTodo.name = todo;
+        this.todos.push(this.newTodo);
+        this.todo = '';
         console.log('click event is trigered');
+    }
+
+    delete(todo) {
+        console.log(todo);
+        let index = this.todos.indexOf(todo);
+        this.todos.pop(index);
+        console.log(index);
     }
 }
