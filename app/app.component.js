@@ -9,13 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var Todo = (function () {
+    function Todo() {
+    }
+    return Todo;
+}());
+exports.Todo = Todo;
 var AppComponent = (function () {
     function AppComponent() {
         this.test = 'test';
-        this.todo = [
-            { name: 'Angular2' },
-            { name: 'Angular1' },
-            { name: 'git status' },
+        this.todos = [
+            { id: 1, name: 'Angular2' },
+            { id: 2, name: 'Angular1' },
+            { id: 3, name: 'git status' },
         ];
     }
     AppComponent.prototype.add = function () {
@@ -26,7 +32,10 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n        <div class=\"row\">\n            <div class=\"col-sm-12\">\n                <div class=\"jumbotron text-center\">\n                    <h1>Angular2 TodoApp <span class=\"badge\">1</span></h1>\n                </div>\n            </div>\n        </div>\n        <div class=\"todoDetails text-center\" *ngFor=\"let list of todo\">\n            <input type=\"checkbox\"/> {{list.name}}\n        </div>\n        <button class=\"btn btn-primary text-center\" (click)=add()>Add</button>\n    "
+        templateUrl: 'app/app.component.html',
+        styles: [
+            "\n        .input {\n            width: 80%;\n            padding: 8px 15px;\n            font-size: 20px;\n        }\n        "
+        ]
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);

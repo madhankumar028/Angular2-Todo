@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1>Angular2 TodoApp <span class="badge">{{todo.length}}</span></h1>
+    </div>
+</div>
+<div class="todoDetails row text-center">
+    <div className="col-sm-4 col-sm-offset-4">
+        <div class="checkbox" *ngFor="let list of todo">
+            <label>
+                <input type="checkbox"/> {{list.name}}
+            </label>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
+        <form>
+            <div class="form-group">
+                <input type="text" class="input text-center"
+                placeholder="Enter the item to include in your todo"/>
+            </div>
+            <button class="btn btn-primary text-center" (click)=add()>Add</button>
+        </form>
+    </div>
+</div>

@@ -1,31 +1,35 @@
 import { Component } from '@angular/core';
 
+export class Todo {
+    id: number;
+    name: string;
+}
+
 @Component({
 
     selector: 'my-app',
-    template: `
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="jumbotron text-center">
-                    <h1>Angular2 TodoApp <span class="badge">1</span></h1>
-                </div>
-            </div>
-        </div>
-        <div class="todoDetails text-center" *ngFor="let list of todo">
-            <input type="checkbox"/> {{list.name}}
-        </div>
-        <button class="btn btn-primary text-center" (click)=add()>Add</button>
-    `
+    templateUrl: 'app/app.component.html',
+    styles: [
+        `
+        .input {
+            width: 80%;
+            padding: 8px 15px;
+            font-size: 20px;
+        }
+        `
+
+    ]
 })
 
 export class AppComponent {
-    test = 'test';
+    test: string = 'test';
 
-    todo = [
-        {name: 'Angular2'},
-        {name: 'Angular1'},
-        {name: 'git status'},
+    todos: Todo[] = [
+        {id: 1, name: 'Angular2'},
+        {id: 2, name: 'Angular1'},
+        {id: 3, name: 'git status'},
     ];
+
     add() {
         console.log('click event is trigered');
     }
