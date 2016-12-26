@@ -12,8 +12,13 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
         this.test = 'test';
+        this.todo = [
+            { name: 'Angular2' },
+            { name: 'Angular1' },
+            { name: 'git status' },
+        ];
     }
-    AppComponent.prototype.counter = function () {
+    AppComponent.prototype.add = function () {
         console.log('click event is trigered');
     };
     return AppComponent;
@@ -21,7 +26,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n    <div className=\"row\">\n        <div className=\"col-sm-12\">\n            <div class=\"jumbotron\">\n                <h1>TodoApp using Angular2</h1>\n                <button class=\"btn btn-primary\" (click)=counter()>ClickMe</button>\n            </div>\n        </div>\n    </div>\n    "
+        template: "\n        <div class=\"row\">\n            <div class=\"col-sm-12\">\n                <div class=\"jumbotron text-center\">\n                    <h1>Angular2 TodoApp <span class=\"badge\">1</span></h1>\n                </div>\n            </div>\n        </div>\n        <div class=\"todoDetails text-center\" *ngFor=\"let list of todo\">\n            <input type=\"checkbox\"/> {{list.name}}\n        </div>\n        <button class=\"btn btn-primary text-center\" (click)=add()>Add</button>\n    "
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);

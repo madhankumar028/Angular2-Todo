@@ -4,21 +4,29 @@ import { Component } from '@angular/core';
 
     selector: 'my-app',
     template: `
-    <div className="row">
-        <div className="col-sm-12">
-            <div class="jumbotron">
-                <h1>TodoApp using Angular2</h1>
-                <button class="btn btn-primary" (click)=counter()>ClickMe</button>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="jumbotron text-center">
+                    <h1>Angular2 TodoApp <span class="badge">1</span></h1>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="todoDetails text-center" *ngFor="let list of todo">
+            <input type="checkbox"/> {{list.name}}
+        </div>
+        <button class="btn btn-primary text-center" (click)=add()>Add</button>
     `
 })
 
 export class AppComponent {
     test = 'test';
 
-    counter() {
+    todo = [
+        {name: 'Angular2'},
+        {name: 'Angular1'},
+        {name: 'git status'},
+    ];
+    add() {
         console.log('click event is trigered');
     }
 }

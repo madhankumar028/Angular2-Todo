@@ -1,5 +1,5 @@
 {
-  "name": "Angular2 TodoApp",
+  "name": "Angular2_TodoApp",
   "version": "1.0.0",
   "description": "sample angular2 TodoApp",
   "main": "tsconfig.json",
@@ -19,6 +19,14 @@
     "typings": "^2.1.0",
     "zone.js": "^0.6.26"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhankumar028/Angular2-Todo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/madhankumar028/Angular2-Todo/issues"
+  },
+  "homepage": "https://github.com/madhankumar028/Angular2-Todo#readme",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\"",
     "dev": "lite-server",
