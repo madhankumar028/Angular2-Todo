@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+
     test: string = 'test';
     newTodo: any = [];
     todo: any;
@@ -23,13 +24,10 @@ export class AppComponent {
         this.newTodo.name = todo;
         this.todos.push(this.newTodo);
         this.todo = '';
-        console.log('click event is trigered');
     }
 
     delete(todo) {
-        console.log(todo);
         let index = this.todos.indexOf(todo);
         this.todos.pop(index);
-        console.log(index);
     }
 }

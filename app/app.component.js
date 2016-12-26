@@ -23,13 +23,10 @@ var AppComponent = (function () {
         this.newTodo.name = todo;
         this.todos.push(this.newTodo);
         this.todo = '';
-        console.log('click event is trigered');
     };
     AppComponent.prototype.delete = function (todo) {
-        console.log(todo);
         var index = this.todos.indexOf(todo);
         this.todos.pop(index);
-        console.log(index);
     };
     return AppComponent;
 }());
