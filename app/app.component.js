@@ -9,22 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var Todo = (function () {
-    function Todo() {
-    }
-    return Todo;
-}());
-exports.Todo = Todo;
 var AppComponent = (function () {
     function AppComponent() {
         this.test = 'test';
         this.todos = [
-            { id: 1, name: 'Angular2' },
-            { id: 2, name: 'Angular1' },
-            { id: 3, name: 'git status' },
+            { name: 'Angular2' },
+            { name: 'Angular1' },
+            { name: 'git status' },
         ];
     }
-    AppComponent.prototype.add = function () {
+    AppComponent.prototype.add = function (todo) {
         console.log('click event is trigered');
     };
     return AppComponent;
@@ -34,7 +28,7 @@ AppComponent = __decorate([
         selector: 'my-app',
         templateUrl: 'app/app.component.html',
         styles: [
-            "\n        .input {\n            width: 80%;\n            padding: 8px 15px;\n            font-size: 20px;\n        }\n        "
+            "\n        .input {\n            width: 100%;\n            padding: 8px 15px;\n            font-size: 20px;\n        }\n        "
         ]
     }),
     __metadata("design:paramtypes", [])

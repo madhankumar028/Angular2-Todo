@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
 
-export class Todo {
-    id: number;
-    name: string;
-}
-
 @Component({
 
     selector: 'my-app',
@@ -12,25 +7,24 @@ export class Todo {
     styles: [
         `
         .input {
-            width: 80%;
+            width: 100%;
             padding: 8px 15px;
             font-size: 20px;
         }
         `
-
     ]
 })
 
 export class AppComponent {
     test: string = 'test';
 
-    todos: Todo[] = [
-        {id: 1, name: 'Angular2'},
-        {id: 2, name: 'Angular1'},
-        {id: 3, name: 'git status'},
+    todos = [
+        {name: 'Angular2'},
+        {name: 'Angular1'},
+        {name: 'git status'},
     ];
 
-    add() {
+    add(todo: Object) {
         console.log('click event is trigered');
     }
 }
