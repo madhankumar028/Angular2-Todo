@@ -1,17 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-
     selector: 'my-app',
     templateUrl: 'app/app.component.html',
-    styles: [
-        `
-        .input {
-            width: 100%;
-            padding: 8px 15px;
-            font-size: 20px;
-        }
-        `
+    styleUrls: [
+        'app/app.component.css'
     ]
 })
 

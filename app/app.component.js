@@ -37,8 +37,8 @@ AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
         templateUrl: 'app/app.component.html',
-        styles: [
-            "\n        .input {\n            width: 100%;\n            padding: 8px 15px;\n            font-size: 20px;\n        }\n        "
+        styleUrls: [
+            'app/app.component.css'
         ]
     }),
     __metadata("design:paramtypes", [])
