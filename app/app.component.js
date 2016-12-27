@@ -24,9 +24,8 @@ var AppComponent = (function () {
         this.todos.push(this.newTodo);
         this.todo = '';
     };
-    AppComponent.prototype.delete = function (todo) {
-        var index = this.todos.indexOf(todo);
-        this.todos.pop(index);
+    AppComponent.prototype.delete = function (index) {
+        this.todos.slice(index, 1);
     };
     return AppComponent;
 }());

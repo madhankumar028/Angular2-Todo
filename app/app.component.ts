@@ -26,8 +26,7 @@ export class AppComponent {
         this.todo = '';
     }
 
-    delete(todo) {
-        let index = this.todos.indexOf(todo);
-        this.todos.pop(index);
+    delete(index) {
+        this.todos.slice(index, 1);
     }
 }
