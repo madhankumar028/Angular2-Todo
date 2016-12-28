@@ -22,8 +22,8 @@ var AppComponent = (function () {
         ];
     }
     AppComponent.prototype.getTodos = function () {
-        var todos = this.componentService.getTodos();
-        console.log(todos);
+        this.componentService.getTodos();
+        console.log();
     };
     AppComponent.prototype.add = function (todo) {
         this.newTodo.name = todo;

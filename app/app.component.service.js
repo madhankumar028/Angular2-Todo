@@ -10,36 +10,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
-var Rx_1 = require("rxjs/Rx");
 require("rxjs/add/operator/map");
-require("rxjs/add/operator/catch");
 var ComponentService = (function () {
     function ComponentService(http) {
         this.http = http;
         this.baseUrl = 'http://apitodo.herokuapp.com/api/todos';
     }
     ComponentService.prototype.getTodos = function () {
-        return this.http.get(this.baseUrl)
-            .map(this.extractResponse)
-            .catch(this.handleError);
-    };
-    ComponentService.prototype.extractResponse = function (res) {
-        var body = res.json();
-        console.log(res);
-        return body.data || {};
-    };
-    ComponentService.prototype.handleError = function (error) {
-        var errMsg;
-        if (error instanceof http_1.Response) {
-            var body = error.json() || '';
-            var err = body.error || JSON.stringify(body);
-            errMsg = error.status + " - " + (error.statusText || '') + " " + err;
-        }
-        else {
-            errMsg = error.message ? error.message : error.toString();
-        }
-        console.error(errMsg);
-        return Rx_1.Observable.throw(errMsg);
+        return this.http
+            .get(this.baseUrl)
+            .map(function (response) { return response.json(); });
     };
     return ComponentService;
 }());

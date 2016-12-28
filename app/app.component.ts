@@ -25,8 +25,8 @@ export class AppComponent {
     ];
 
     getTodos() {
-        let todos = this.componentService.getTodos();
-        console.log(todos);
+        this.componentService.getTodos();
+        console.log();
     }
 
     add(todo) {
