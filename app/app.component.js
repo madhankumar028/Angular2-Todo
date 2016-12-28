@@ -15,23 +15,19 @@ var AppComponent = (function () {
         this.componentService = componentService;
         this.test = 'test';
         this.newTodo = [];
-        this.todos = [
-            { name: 'Angular2' },
-            { name: 'Angular1' },
-            { name: 'git status' },
-        ];
+        this.todos = ['Angular2', 'Angular1', 'git status'];
     }
     AppComponent.prototype.getTodos = function () {
         this.componentService.getTodos();
         console.log();
     };
     AppComponent.prototype.add = function (todo) {
-        this.newTodo.name = todo;
+        this.newTodo = todo;
         this.todos.push(this.newTodo);
         this.todo = '';
     };
     AppComponent.prototype.delete = function (index) {
-        this.todos.slice(index, 1);
+        this.todos.splice(index, 1);
     };
     return AppComponent;
 }());

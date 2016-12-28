@@ -18,11 +18,7 @@ export class AppComponent {
     newTodo: any = [];
     todo: any;
 
-    todos = [
-        {name: 'Angular2'},
-        {name: 'Angular1'},
-        {name: 'git status'},
-    ];
+    todos = [ 'Angular2', 'Angular1', 'git status' ];
 
     getTodos() {
         this.componentService.getTodos();
@@ -30,12 +26,12 @@ export class AppComponent {
     }
 
     add(todo) {
-        this.newTodo.name = todo;
+        this.newTodo = todo;
         this.todos.push(this.newTodo);
         this.todo = '';
     }
 
     delete(index) {
-        this.todos.slice(index, 1);
+        this.todos.splice(index, 1);
     }
 }
