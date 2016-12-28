@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
+import { ComponentService } from './app.component.service';
 
 @Component({
     selector: 'my-app',
     templateUrl: 'app/app.component.html',
     styleUrls: [
         'app/app.component.css'
-    ]
+    ],
+    providers: [ComponentService]
 })
 
 export class AppComponent {
+
+    constructor (private componentService: ComponentService) {}
 
     test: string = 'test';
     newTodo: any = [];
@@ -19,6 +23,11 @@ export class AppComponent {
         {name: 'Angular1'},
         {name: 'git status'},
     ];
+
+    getTodos() {
+        let todos = this.componentService.getTodos();
+        console.log(todos);
+    }
 
     add(todo) {
         this.newTodo.name = todo;

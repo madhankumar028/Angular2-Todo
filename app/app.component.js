@@ -9,8 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var app_component_service_1 = require("./app.component.service");
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(componentService) {
+        this.componentService = componentService;
         this.test = 'test';
         this.newTodo = [];
         this.todos = [
@@ -19,6 +21,10 @@ var AppComponent = (function () {
             { name: 'git status' },
         ];
     }
+    AppComponent.prototype.getTodos = function () {
+        var todos = this.componentService.getTodos();
+        console.log(todos);
+    };
     AppComponent.prototype.add = function (todo) {
         this.newTodo.name = todo;
         this.todos.push(this.newTodo);
@@ -35,9 +41,10 @@ AppComponent = __decorate([
         templateUrl: 'app/app.component.html',
         styleUrls: [
             'app/app.component.css'
-        ]
+        ],
+        providers: [app_component_service_1.ComponentService]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [app_component_service_1.ComponentService])
 ], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

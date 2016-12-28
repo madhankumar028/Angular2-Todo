@@ -19,8 +19,9 @@
                 <input type="text" name="input" [(ngModel)]="todo" class="input form-control text-center"
                 placeholder="Enter the item to include in your todo" required/>
             </div>
-            <button class="btn btn-primary text-center" (click)=add(todo)
-                    [disabled]="form.invalid">Add</button>
+            <button class="btn btn-primary text-center" (click)=add(todo) [disabled]="form.invalid">
+                Add</button>
+            <button (click)=getTodos()>click</button>
         </form>
     </div>
 </div>
