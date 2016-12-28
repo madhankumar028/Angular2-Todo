@@ -20,6 +20,7 @@ export class AppComponent {
 
     todos = [ 'Angular2', 'Angular1', 'git status' ];
 
+    // Todo: Yet to add few more things to complete it.
     getTodos() {
         this.componentService.getTodos();
         console.log();

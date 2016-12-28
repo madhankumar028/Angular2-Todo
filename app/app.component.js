@@ -17,6 +17,7 @@ var AppComponent = (function () {
         this.newTodo = [];
         this.todos = ['Angular2', 'Angular1', 'git status'];
     }
+    // Todo: Yet to add few more things to complete it.
     AppComponent.prototype.getTodos = function () {
         this.componentService.getTodos();
         console.log();

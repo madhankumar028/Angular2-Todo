@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 
 import 'rxjs/add/operator/map';
 
+// Todo: have to add few things  for observable
 @Injectable()
 export class ComponentService {
 
@@ -16,6 +17,8 @@ export class ComponentService {
            .map(response => response.json());
     }
 
+    // Todo: Once the observable configured, this area's comment will get removed.
+    
     // private extractResponse(res: Response) {
     //     let body = res.json();
     //     console.log(res);
