@@ -14,7 +14,6 @@ export class AppComponent {
 
     constructor (private componentService: ComponentService) {}
 
-    test: string = 'test';
     newTodo: any = [];
     todo: any;
 
@@ -23,7 +22,6 @@ export class AppComponent {
     // Todo: Yet to add few more things to complete it.
     getTodos() {
         this.componentService.getTodos();
-        console.log();
     }
 
     add(todo) {
