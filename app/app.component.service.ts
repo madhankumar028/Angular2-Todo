@@ -8,14 +8,31 @@ export class ComponentService {
 
     baseUrl = 'http://apitodo.herokuapp.com/api/todos';
 
+    /**
+     * Performs a request with `get` http method.
+     */
     getTodos() {
         return this.http.get(this.baseUrl);
     }
 
+    /**
+     * Performs a request with `post` http method.
+     */
     addTodos(newTodo) {
+        
         var body = {
             todo: newTodo
         }
         return this.http.post(this.baseUrl, body);
+    }
+
+    /**
+     * Performs a request with `delete` http method.
+     */
+    deleteTodo(id) {
+        
+        var deleteId = id;
+        console.log(this.baseUrl +'/'+ deleteId);
+        return this.http.delete(this.baseUrl +'/'+ deleteId);
     }
 }

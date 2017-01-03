@@ -15,14 +15,28 @@ var ComponentService = (function () {
         this.http = http;
         this.baseUrl = 'http://apitodo.herokuapp.com/api/todos';
     }
+    /**
+     * Performs a request with `get` http method.
+     */
     ComponentService.prototype.getTodos = function () {
         return this.http.get(this.baseUrl);
     };
+    /**
+     * Performs a request with `post` http method.
+     */
     ComponentService.prototype.addTodos = function (newTodo) {
         var body = {
             todo: newTodo
         };
         return this.http.post(this.baseUrl, body);
+    };
+    /**
+     * Performs a request with `delete` http method.
+     */
+    ComponentService.prototype.deleteTodo = function (id) {
+        var deleteId = id;
+        console.log(this.baseUrl + '/' + deleteId);
+        return this.http.delete(this.baseUrl + '/' + deleteId);
     };
     return ComponentService;
 }());

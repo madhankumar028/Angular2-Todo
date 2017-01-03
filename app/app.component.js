@@ -13,6 +13,7 @@ var app_component_service_1 = require("./app.component.service");
 var AppComponent = (function () {
     function AppComponent(componentService) {
         this.componentService = componentService;
+        this.todo = [];
     }
     AppComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -29,6 +30,13 @@ var AppComponent = (function () {
         });
     };
     AppComponent.prototype.deleteTodo = function (index) {
+        var _this = this;
+        var delTodo = this.todo[index];
+        var delTodoId = delTodo._id;
+        this.componentService.deleteTodo(delTodoId)
+            .subscribe(function (data) {
+            _this.todo.push(data.json().todo);
+        });
     };
     return AppComponent;
 }());
