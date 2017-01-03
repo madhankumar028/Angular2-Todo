@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ComponentService } from './app.component.service';
 
 @Component({
@@ -10,27 +10,21 @@ import { ComponentService } from './app.component.service';
     providers: [ComponentService]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-    constructor (private componentService: ComponentService) {}
+    constructor(private componentService: ComponentService) {}
 
-    newTodo: any = [];
     todo: any;
 
-    todos = [ 'Angular2', 'Angular1', 'git status' ];
-
-    // Todo: Yet to add few more things to complete it.
-    getTodos() {
-        this.componentService.getTodos();
-    }
-
-    add(todo) {
-        this.newTodo = todo;
-        this.todos.push(this.newTodo);
-        this.todo = '';
+    ngOnInit() {
+        this.componentService.getTodos()
+            .subscribe(data => {
+                console.log(data);
+                console.log(this.todo = data.json().todo);
+            });
     }
 
     delete(index) {
-        this.todos.splice(index, 1);
+        
     }
 }

@@ -1,13 +1,13 @@
 <div class="container">
     <div class="jumbotron text-center">
-        <h1>Angular2 TodoApp <span class="badge">{{todos.length}}</span></h1>
+        <h1>Angular2 TodoApp <span class="badge"></span></h1>
     </div>
 </div>
 <div class="todoDetails row text-center">
     <div className="col-sm-4 col-sm-offset-4">
-        <div class="checkbox" *ngFor="let list of todos; let i=index">
+        <div class="checkbox" *ngFor="let list of todo; let i=index">
             <label>
-                <input type="checkbox" (click)=delete(i) /> {{list}}
+                <input type="checkbox" (click)=delete(i) /> {{list.todo}}
             </label>
         </div>
     </div>
@@ -16,12 +16,11 @@
     <div class="col-sm-8 col-sm-offset-2 text-center">
         <form #form="ngForm">
             <div class="form-group">
-                <input type="text" name="input" [(ngModel)]="todo" class="input form-control text-center"
+                <input type="text" name="input" [(ngModel)]="newTodo" class="input form-control text-center"
                 placeholder="Enter the item to include in your todo" required/>
             </div>
             <button class="btn btn-primary text-center" (click)=add(todo) [disabled]="form.invalid">
                 Add</button>
-            <button class="btn btn-default" (click)=getTodos()>Test</button>
         </form>
     </div>
 </div>

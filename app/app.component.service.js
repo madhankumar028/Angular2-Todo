@@ -10,17 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
-require("rxjs/add/operator/map");
-// Todo: have to add few things  for observable
 var ComponentService = (function () {
     function ComponentService(http) {
         this.http = http;
         this.baseUrl = 'http://apitodo.herokuapp.com/api/todos';
     }
     ComponentService.prototype.getTodos = function () {
-        return this.http
-            .get(this.baseUrl)
-            .map(function (response) { return response.json(); });
+        return this.http.get(this.baseUrl);
     };
     return ComponentService;
 }());

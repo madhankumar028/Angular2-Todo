@@ -13,22 +13,14 @@ var app_component_service_1 = require("./app.component.service");
 var AppComponent = (function () {
     function AppComponent(componentService) {
         this.componentService = componentService;
-        this.test = 'test';
-        this.newTodo = [];
-        this.todos = ['Angular2', 'Angular1', 'git status'];
     }
-    // Todo: Yet to add few more things to complete it.
-    AppComponent.prototype.getTodos = function () {
-        this.componentService.getTodos();
-        console.log();
-    };
-    AppComponent.prototype.add = function (todo) {
-        this.newTodo = todo;
-        this.todos.push(this.newTodo);
-        this.todo = '';
-    };
-    AppComponent.prototype.delete = function (index) {
-        this.todos.splice(index, 1);
+    AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.componentService.getTodos()
+            .subscribe(function (data) {
+            console.log(data);
+            console.log(_this.todo = data.json().todo);
+        });
     };
     return AppComponent;
 }());

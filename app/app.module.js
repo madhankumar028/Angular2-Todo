@@ -13,6 +13,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var http_1 = require("@angular/http");
+var app_component_service_1 = require("./app.component.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -20,8 +21,9 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, http_1.JsonpModule],
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
         declarations: [app_component_1.AppComponent],
+        providers: [app_component_service_1.ComponentService],
         bootstrap: [app_component_1.AppComponent]
     }),
     __metadata("design:paramtypes", [])
