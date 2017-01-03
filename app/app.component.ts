@@ -38,8 +38,7 @@ export class AppComponent implements OnInit {
         var delTodoId = delTodo._id;
 
         this.componentService.deleteTodo(delTodoId)
-            .subscribe(data => {
-                this.todo.push(data.json().todo);
-            });
+            .subscribe();
+        this.ngOnInit();
     }
 }

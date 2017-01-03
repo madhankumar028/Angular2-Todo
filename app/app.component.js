@@ -30,13 +30,11 @@ var AppComponent = (function () {
         });
     };
     AppComponent.prototype.deleteTodo = function (index) {
-        var _this = this;
         var delTodo = this.todo[index];
         var delTodoId = delTodo._id;
         this.componentService.deleteTodo(delTodoId)
-            .subscribe(function (data) {
-            _this.todo.push(data.json().todo);
-        });
+            .subscribe();
+        this.ngOnInit();
     };
     return AppComponent;
 }());
