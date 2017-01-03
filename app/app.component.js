@@ -18,9 +18,17 @@ var AppComponent = (function () {
         var _this = this;
         this.componentService.getTodos()
             .subscribe(function (data) {
-            console.log(data);
-            console.log(_this.todo = data.json().todo);
+            _this.todo = data.json().todo;
         });
+    };
+    AppComponent.prototype.addTodo = function (newTodo) {
+        var _this = this;
+        this.componentService.addTodos(newTodo)
+            .subscribe(function (data) {
+            _this.todo.push(data.json().todo);
+        });
+    };
+    AppComponent.prototype.deleteTodo = function (index) {
     };
     return AppComponent;
 }());

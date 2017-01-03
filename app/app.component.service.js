@@ -18,6 +18,12 @@ var ComponentService = (function () {
     ComponentService.prototype.getTodos = function () {
         return this.http.get(this.baseUrl);
     };
+    ComponentService.prototype.addTodos = function (newTodo) {
+        var body = {
+            todo: newTodo
+        };
+        return this.http.post(this.baseUrl, body);
+    };
     return ComponentService;
 }());
 ComponentService = __decorate([

@@ -11,4 +11,11 @@ export class ComponentService {
     getTodos() {
         return this.http.get(this.baseUrl);
     }
+
+    addTodos(newTodo) {
+        var body = {
+            todo: newTodo
+        }
+        return this.http.post(this.baseUrl, body);
+    }
 }

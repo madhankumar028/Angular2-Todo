@@ -7,7 +7,7 @@
     <div className="col-sm-4 col-sm-offset-4">
         <div class="checkbox" *ngFor="let list of todo; let i=index">
             <label>
-                <input type="checkbox" (click)=delete(i) /> {{list.todo}}
+                <input type="checkbox" (click)=deleteTodo(i) /> {{list.todo}}
             </label>
         </div>
     </div>
@@ -19,7 +19,7 @@
                 <input type="text" name="input" [(ngModel)]="newTodo" class="input form-control text-center"
                 placeholder="Enter the item to include in your todo" required/>
             </div>
-            <button class="btn btn-primary text-center" (click)=add(todo) [disabled]="form.invalid">
+            <button class="btn btn-primary text-center" (click)=addTodo(newTodo) [disabled]="form.invalid">
                 Add</button>
         </form>
     </div>

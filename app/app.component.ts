@@ -19,12 +19,18 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         this.componentService.getTodos()
             .subscribe(data => {
-                console.log(data);
-                console.log(this.todo = data.json().todo);
+                this.todo = data.json().todo;
             });
     }
 
-    delete(index) {
-        
+    addTodo (newTodo) {
+        this.componentService.addTodos(newTodo)
+            .subscribe(data => {
+                this.todo.push(data.json().todo);
+            })
+    }
+
+    deleteTodo(index) {
+
     }
 }
