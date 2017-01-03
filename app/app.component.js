@@ -14,6 +14,7 @@ var AppComponent = (function () {
     function AppComponent(componentService) {
         this.componentService = componentService;
         this.todo = [];
+        this.newTodo = '';
     }
     AppComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -22,12 +23,13 @@ var AppComponent = (function () {
             _this.todo = data.json().todo;
         });
     };
-    AppComponent.prototype.addTodo = function (newTodo) {
+    AppComponent.prototype.addTodo = function (addNewTodo) {
         var _this = this;
-        this.componentService.addTodos(newTodo)
+        this.componentService.addTodos(addNewTodo)
             .subscribe(function (data) {
             _this.todo.push(data.json().todo);
         });
+        this.newTodo = '';
     };
     AppComponent.prototype.deleteTodo = function (index) {
         var _this = this;
@@ -35,7 +37,9 @@ var AppComponent = (function () {
         var delTodoId = delTodo._id;
         this.componentService.deleteTodo(delTodoId)
             .subscribe(function (data) {
+            console.log(_this.todo);
             _this.todo.push(data.json().todo);
+            console.log(_this.todo);
         });
     };
     return AppComponent;

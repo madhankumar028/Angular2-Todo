@@ -35,7 +35,6 @@ var ComponentService = (function () {
      */
     ComponentService.prototype.deleteTodo = function (id) {
         var deleteId = id;
-        console.log(this.baseUrl + '/' + deleteId);
         return this.http.delete(this.baseUrl + '/' + deleteId);
     };
     return ComponentService;

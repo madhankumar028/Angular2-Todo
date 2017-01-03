@@ -32,7 +32,6 @@ export class ComponentService {
     deleteTodo(id) {
         
         var deleteId = id;
-        console.log(this.baseUrl +'/'+ deleteId);
         return this.http.delete(this.baseUrl +'/'+ deleteId);
     }
 }
