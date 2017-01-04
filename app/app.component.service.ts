@@ -1,4 +1,4 @@
-import { Injectable }     from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
 @Injectable()
@@ -22,7 +22,8 @@ export class ComponentService {
         
         var body = {
             todo: newTodo
-        }
+        };
+
         return this.http.post(this.baseUrl, body);
     }
 

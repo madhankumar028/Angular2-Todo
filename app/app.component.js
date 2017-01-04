@@ -32,15 +32,11 @@ var AppComponent = (function () {
         this.newTodo = '';
     };
     AppComponent.prototype.deleteTodo = function (index) {
-        var _this = this;
         var delTodo = this.todo[index];
         var delTodoId = delTodo._id;
         this.componentService.deleteTodo(delTodoId)
-            .subscribe(function (data) {
-            console.log(_this.todo);
-            _this.todo.push(data.json().todo);
-            console.log(_this.todo);
-        });
+            .subscribe();
+        this.ngOnInit();
     };
     return AppComponent;
 }());
