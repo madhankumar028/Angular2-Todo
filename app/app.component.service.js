@@ -34,8 +34,7 @@ var ComponentService = (function () {
      * Performs a request with `delete` http method.
      */
     ComponentService.prototype.deleteTodo = function (id) {
-        var deleteId = id;
-        return this.http.delete(this.baseUrl + '/' + deleteId);
+        return this.http.delete(this.baseUrl + '/' + id);
     };
     return ComponentService;
 }());

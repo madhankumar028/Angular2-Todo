@@ -36,10 +36,9 @@ export class AppComponent implements OnInit {
 
     deleteTodo(index) {
         
-        var delTodo = this.todo[index];
-        var delTodoId = delTodo._id;
-
-        this.componentService.deleteTodo(delTodoId)
+        let delTodo = this.todo[index]._id;
+        
+        this.componentService.deleteTodo(delTodo)
             .subscribe();
         
         this.ngOnInit();

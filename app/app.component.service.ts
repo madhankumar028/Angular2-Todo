@@ -20,7 +20,7 @@ export class ComponentService {
      */
     addTodos(newTodo) {
         
-        var body = {
+        let body = {
             todo: newTodo
         };
 
@@ -31,8 +31,6 @@ export class ComponentService {
      * Performs a request with `delete` http method.
      */
     deleteTodo(id) {
-        
-        var deleteId = id;
-        return this.http.delete(this.baseUrl +'/'+ deleteId);
+        return this.http.delete(this.baseUrl +'/'+ id);
     }
 }
