@@ -1,5 +1,5 @@
 {
-  "name": "Angular2_TodoApp",
+  "name": "angular2_todoapp",
   "version": "1.0.0",
   "description": "sample angular2 TodoApp",
   "main": "tsconfig.json",
@@ -32,8 +32,8 @@
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\"",
     "dev": "lite-server",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
+    "build": "tsc",
+    "build:w": "tsc -w",
     "typings": "typings",
     "postinstall": "typings install"
   },

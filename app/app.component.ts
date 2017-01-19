@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
             });
     }
 
-    addTodo (addNewTodo) {
+    addTodo(addNewTodo) {
         
         this.componentService.addTodos(addNewTodo)
             .subscribe(data => {
