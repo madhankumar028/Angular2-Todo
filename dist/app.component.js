@@ -20,19 +20,20 @@ var AppComponent = (function () {
         var _this = this;
         this.componentService.getTodos()
             .subscribe(function (data) {
-            _this.todo = data.json().todo;
+            console.log(data.json());
+            _this.todo = data.json();
         });
     };
     AppComponent.prototype.addTodo = function (addNewTodo) {
         var _this = this;
         this.componentService.addTodos(addNewTodo)
             .subscribe(function (data) {
-            _this.todo.push(data.json().todo);
+            _this.todo.push(data.json());
         });
         this.newTodo = '';
     };
     AppComponent.prototype.deleteTodo = function (index) {
-        var delTodo = this.todo[index]._id;
+        var delTodo = this.todo[index].id;
         this.componentService.deleteTodo(delTodo)
             .subscribe();
         this.ngOnInit();

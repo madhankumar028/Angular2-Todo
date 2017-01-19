@@ -6,7 +6,7 @@ export class ComponentService {
 
     constructor (private http: Http) {}
 
-    baseUrl = 'http://apitodo.herokuapp.com/api/todos';
+    baseUrl = 'http://localhost:3004/Todos';
 
     /**
      * Performs a request with `get` http method.

@@ -21,7 +21,8 @@ export class AppComponent implements OnInit {
         
         this.componentService.getTodos()
             .subscribe(data => {
-                this.todo = data.json().todo;
+                console.log(data.json());
+                this.todo = data.json();
             });
     }
 
@@ -29,14 +30,14 @@ export class AppComponent implements OnInit {
         
         this.componentService.addTodos(addNewTodo)
             .subscribe(data => {
-                this.todo.push(data.json().todo);
+                this.todo.push(data.json());
             });
         this.newTodo = '';
     }
 
     deleteTodo(index) {
         
-        let delTodo = this.todo[index]._id;
+        let delTodo = this.todo[index].id;
         
         this.componentService.deleteTodo(delTodo)
             .subscribe();

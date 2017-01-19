@@ -13,7 +13,7 @@ var http_1 = require("@angular/http");
 var ComponentService = (function () {
     function ComponentService(http) {
         this.http = http;
-        this.baseUrl = 'http://apitodo.herokuapp.com/api/todos';
+        this.baseUrl = 'http://localhost:3004/Todos';
     }
     /**
      * Performs a request with `get` http method.
