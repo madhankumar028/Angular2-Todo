@@ -1,6 +1,6 @@
 # Angular2 TodoApp
 
-##TodoApp using Angular2 with typescript.
+##TodoApp using Angular2 with typescript
 ***************
 
 The main motive of this app to learn about the basics of **Angular2** and **json-server**.
