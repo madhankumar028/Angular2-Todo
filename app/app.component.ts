@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     todo = [];
     newTodo = '';
 
-    ngOnInit() {
+    ngOnInit() {  
         
         this.componentService.getTodos()
             .subscribe(data => {
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
             });
     }
 
-    addTodo(addNewTodo) {
+    addTodo(addNewTodo) {       
         
         this.componentService.addTodos(addNewTodo)
             .subscribe(data => {
@@ -38,10 +38,8 @@ export class AppComponent implements OnInit {
     deleteTodo(index) {
         
         let delTodo = this.todo[index].id;
-        
         this.componentService.deleteTodo(delTodo)
             .subscribe();
-        
         this.ngOnInit();
     }
 }
