@@ -7,12 +7,12 @@
     "@angular/common": "^2.4.1",
     "@angular/compiler": "^2.4.1",
     "@angular/core": "^2.4.1",
+    "@angular/forms": "latest",
+    "@angular/http": "latest",
     "@angular/platform-browser": "^2.4.1",
     "@angular/platform-browser-dynamic": "^2.4.1",
-    "@angular/forms": "latest",
     "@angular/router": "^3.0.0-rc.1",
     "@angular/upgrade": "^2.0.0-rc.5",
-    "@angular/http": "latest",
     "core-js": "^2.4.1",
     "reflect-metadata": "^0.1.9",
     "rxjs": "^5.0.0-beta.12",
@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/madhankumar028/Angular2-Todo#readme",
   "scripts": {
-    "start": "concurrently --kill-others \"npm run dev\" \"npm run db\"",
-    "db": "json-server --watch db.json --port 3004",
+    "start": "concurrently -k \"npm run dev\" \"npm run db\"",
+    "db": "json-server --watch db.json --port 3005",
     "dev": "lite-server",
     "build": "tsc",
     "build:w": "tsc -w",
@@ -42,6 +42,7 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.1.0",
+    "json-server": "^0.9.4",
     "lite-server": "^2.2.2"
   }
 }

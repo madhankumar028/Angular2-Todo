@@ -20,7 +20,6 @@ var AppComponent = (function () {
         var _this = this;
         this.componentService.getTodos()
             .subscribe(function (data) {
-            console.log(data.json());
             _this.todo = data.json();
         });
     };

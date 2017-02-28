@@ -16,11 +16,12 @@
     <div class="col-sm-8 col-sm-offset-2 text-center">
         <form #form="ngForm">
             <div class="form-group">
-                <input type="text" name="input" [(ngModel)]="newTodo" class="input form-control text-center"
+                <input type="text" name="input" [(ngModel)]="newTodo"
+                class="input form-control text-center"
                 placeholder="Enter the item to include in your todo" required/>
             </div>
-            <button class="btn btn-primary text-center" (click)=addTodo(newTodo) [disabled]="form.invalid">
-                Add</button>
+            <button class="btn btn-primary text-center" (click)=addTodo(newTodo)
+            [disabled]="form.invalid">Add</button>
         </form>
     </div>
 </div>

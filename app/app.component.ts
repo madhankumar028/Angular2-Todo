@@ -21,7 +21,6 @@ export class AppComponent implements OnInit {
         
         this.componentService.getTodos()
             .subscribe(data => {
-                console.log(data.json());
                 this.todo = data.json();
             });
     }

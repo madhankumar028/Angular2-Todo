@@ -6,7 +6,7 @@ export class ComponentService {
 
     constructor (private http: Http) {}
 
-    baseUrl = 'http://localhost:3004/Todos';
+    baseUrl = 'http://localhost:3005/todos';
 
     /**
      * Performs a request with `get` http method.

@@ -13,7 +13,7 @@ var http_1 = require("@angular/http");
 var ComponentService = (function () {
     function ComponentService(http) {
         this.http = http;
-        this.baseUrl = 'http://localhost:3004/Todos';
+        this.baseUrl = 'http://localhost:3005/Todos';
     }
     /**
      * Performs a request with `get` http method.
